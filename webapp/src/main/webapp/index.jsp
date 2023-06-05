@@ -1,49 +1,72 @@
-<Html>
-<head> 
-<title>
-Registration Page
-</title>
-</head>
-<body bgcolor="Lightskyblue">
-<br>
-<br>
-<form>
+<form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
 
-<label> Firstname </label>       
-<input type="text" name="firstname" size="15"/> <br> <br>
-<label> Middlename: </label>   
-<input type="text" name="middlename" size="15"/> <br> <br>
-<label> Lastname: </label>       
-<input type="text" name="lastname" size="15"/> <br> <br>
-
-<label> 
-Course :
+<p>
+<label>Name
+<input type="text" name="customer_name" required>
 </label> 
-<select>
-<option value="Course">Course</option>
-<option value="BCA">BCA</option>
-<option value="BBA">BBA</option>
-<option value="B.Tech">B.Tech</option>
-<option value="MBA">MBA</option>
-<option value="MCA">MCA</option>
-<option value="M.Tech">M.Tech</option>
-</select>
+</p>
 
-<br>
-<label> 
-Gender :
-</label><br>
-<input type="radio" name="male"/> Male <br>
-<input type="radio" name="female"/> Female <br>
-<input type="radio" name="other"/> Other
-<br>
-<br>
-
-<label> 
-Phone :
+<p>
+<label>Phone 
+<input type="tel" name="phone_number">
 </label>
-<input type="text" name="country code"  value="+91" size="2"/> 
-<input type="text" name="phone" size="10"/> <br> <br>
-Address
-<br>
-<textarea cols="80" rows="5" value="address">
+</p>
+
+<p>
+<label>Email 
+<input type="email" name="email_address">
+</label>
+</p>
+
+<fieldset>
+<legend>Which taxi do you require?</legend>
+<p><label> <input type="radio" name="taxi" required value="car"> Car </label></p>
+<p><label> <input type="radio" name="taxi" required value="van"> Van </label></p>
+<p><label> <input type="radio" name="taxi" required value="tuktuk"> Tuk Tuk </label></p>
+</fieldset>
+
+<fieldset>
+<legend>Extras</legend>
+<p><label> <input type="checkbox" name="extras" value="baby"> Baby Seat </label></p>
+<p><label> <input type="checkbox" name="extras" value="wheelchair"> Wheelchair Access </label></p>
+<p><label> <input type="checkbox" name="extras" value="tip"> Stock Tip </label></p>
+</fieldset>
+
+<p>
+<label>Pickup Date/Time
+<input type="datetime-local" name="pickup_time" required>
+</label>
+</p>
+	
+<p>
+<label>Pickup Place
+<select id="pickup_place" name="pickup_place">
+<option value="" selected="selected">Select One</option>
+<option value="office" >Taxi Office</option>
+<option value="town_hall" >Town Hall</option>
+<option value="telepathy" >We'll Guess!</option>
+</select>
+</label> 
+</p>
+
+<p>
+<label>Dropoff Place
+<input type="text" name="dropoff_place" required list="destinations">
+</label>
+
+<datalist id="destinations">
+<option value="Airport">
+<option value="Beach">
+<option value="Fred Flinstone's House">
+</datalist>
+</p>
+
+<p>
+<label>Special Instructions
+<textarea name="comments" maxlength="500"></textarea>
+</label>
+</p>
+
+<p><button>Submit Booking</button></p>
+
+</form>
