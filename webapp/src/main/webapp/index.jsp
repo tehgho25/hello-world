@@ -30,7 +30,6 @@ Course :
 </select>
 
 <br>
-<br>
 <label> 
 Gender :
 </label><br>
