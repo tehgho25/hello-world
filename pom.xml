@@ -138,6 +138,7 @@
 
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
           <version>2.11</version>
         </plugin>
                
