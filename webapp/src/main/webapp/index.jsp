@@ -1,5 +1,5 @@
 <form method="get" enctype="application/x-www-form-urlencoded" action="/html/codes/html_form_handler.cfm">
-
+<New user Register</h1>
 <p>
 <label>Name
 <input type="text" name="customer_name" required>
